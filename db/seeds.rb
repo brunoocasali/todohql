@@ -9,3 +9,9 @@
 require 'factory_bot_rails'
 
 FactoryBot.create_list(:user, 10)
+
+User.find_each do |user|
+  quantity = rand(0..5).to_i
+
+  FactoryBot.create_list(:todo, quantity, user: user)
+end
