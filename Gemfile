@@ -21,6 +21,11 @@ group :development, :test do
 end
 
 group :development do
+  # For graphiql path
+  gem 'sass-rails'
+  gem 'uglifier'
+  gem 'coffee-rails'
+  gem 'mini_racer'
   gem 'graphiql-rails'
 
   gem 'listen', '>= 3.0.5', '< 3.2'

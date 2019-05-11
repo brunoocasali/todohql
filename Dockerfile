@@ -1,19 +1,9 @@
-FROM ruby:2.6.3-alpine3.9
+FROM ruby:2.6.3
 
-RUN apk add --update \
-  build-base \
-  bash \
-  make \
-  gcc \
-  libc-dev \ 
-  sqlite-dev \
-  curl \
-  less \
-  libxml2-dev \
-  libxslt-dev \
-  ruby-dev \
-  tzdata \
-  && rm -rf /var/cache/apk/*
+RUN apt-get update && apt-get install -y \
+  build-essential \
+  musl-dev \
+  nodejs
 
 ENV APP_ROOT /app
 ENV BUNDLE_PATH /usr/local/bundle
