@@ -5,5 +5,6 @@ module Types
     field :email, String, null: false
     field :birthday, String, null: false
     field :bio, String, null: false
+    field :todos, [TodoType], null: false
   end
 end

@@ -6,7 +6,7 @@ module Types
 
     # this method is invoked, when `all_user` fields is being resolved
     def all_users
-      User.all
+      User.all.preload(:todos)
     end
   end
 end
