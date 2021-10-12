@@ -5,7 +5,7 @@ ruby '2.6.3'
 
 gem 'rails', '6.0.0'
 gem 'sqlite3'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 5.5'
 
 gem 'graphql'
 
